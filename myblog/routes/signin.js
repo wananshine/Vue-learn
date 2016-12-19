@@ -4,4 +4,4 @@ var router = express.Router();
 var checkNotLogin = require('../middlewares/check').checkNotLogin;
 
 // GET /signin µÇÂ¼Ò³
-router.get('/', checkNotLogin);
+router.get('/', checkNotLogin,function(abc){});
