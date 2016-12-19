@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="keywords" content="webank">
+    <meta name="content-type" content="深圳回亿投资">
+    <meta name="Copyright" Content="hyzb.All Rights Reserved">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!--隐藏状态栏-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--启动webapp全屏模式-->
+    <meta name="apple-mobile-web-app-title" content="tsh">
+    <!--添加主屏后标题-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <!--避免转码-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--脱机禁用-->
+    <title>PC端</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/join_us.css">
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+</head>
+<body>
+<header>
+    <div class="head">
+        <div class="tsh-nav">
+            <div class="tsh-nav-all">
+                <div class="logo"><img src="images/logo.png"></div>
+                <div class="navitems">
+                    <div class="nav-info">
+                        <a class="nav-list" href="index.html">首页</a>
+                        <a class="nav-list" href="about.html">关于我们</a>
+                        <a class="nav-list" href="">商家入驻</a>
+                        <a class="nav-list active">加入我们</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <ul>
+                <li><img src="images/join-banner.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="content">
+        <div class="pc-container">
+            <div class="tes-title">
+                <strong>加入我们</strong>
+                <span>Join Us</span>
+            </div>
+            <div class="jobs">
+                <div class="job-tab-l" id="job-tab-l">
+
+                </div>
+                <div class="job-info-r" id="job-info-r">
+
+                </div>
+            </div>
+        </div>
+        <div class="pc-container">
+            <div class="tes-title">
+                <strong>员工福利</strong>
+                <span>Benefi</span>
+            </div>
+            <div class="welfare">
+                <dl>
+                    <dt><img src="images/join-01.png"></dt>
+                    <dd>每月生日会</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/join-02.png"></dt>
+                    <dd>团队出游</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/join-03.png"></dt>
+                    <dd>节假日福利</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="share">
+    <div class="s-tool">
+        <a class="s-weibo" href="http://weibo.com/p/1006065098248769"><img src="images/icon-01.png"><i>新浪微博</i></a>
+        <a class="s-cell"><img src="images/icon-02.png"><i>关注微信</i></a>
+        <a class="s-cell"><img src="images/icon-03.png"><i>下载APP</i></a>
+        <a class="s-top"><img src="images/icon-04.png"><i>TOP</i></a>
+    </div>
+    <div class="s-info">
+        <span></span>
+        <span>
+            <img src="images/icon-w.jpg">
+            <i>扫一扫关注</i><small>微信公众号</small>
+        </span>
+        <span >
+            <img src="images/icon-app.jpg">
+            <i>下载APP即送</i><small><em>188元</em>新人红包</small>
+        </span>
+    </div>
+</div>
+
+
+    <div class="tsh-foot">
+        <div class="fo-top">
+            <dl>
+                <dt><img src="images/f-04.png"></dt>
+                <dd>假一赔十</dd>
+            </dl>
+            <dl>
+                <dt><img src="images/f-01.png"></dt>
+                <dd>贵就赔</dd>
+            </dl>
+            <dl>
+                <dt><img src="images/f-05.png"></dt>
+                <dd>7天放心退</dd>
+            </dl>
+            <dl>
+                <dt><img src="images/f-03.png"></dt>
+                <dd>在线客服</dd>
+            </dl>
+        </div>
+        <div class="fo-btm">
+            <div class="copyright">
+                <div class="cr-tab">
+                    <a href="about.html">关于我们</a>
+                    <a>商家入驻</a>
+                    <a href="join_us.html">加入我们</a>
+                    <a>联系我们</a>
+                </div>
+                <div class="com">Copyright © 2013-2015 特奢汇 www.teshehui.com 版权所有</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $(function () {
+        var aj=$.ajax({
+            url:"http://datamgr.teshehui.com/api/config/1000008",
+            dateType:"json",
+            type:"GET",
+            async:"true",
+            success:function (data) {
+                if(data.retcode===0){
+                    var jobs_content="";
+                    var posi_content="";
+                    var posi_container="";
+                    data.data.map(function (item,index) {
+                        jobs_content += '<a class="l-list"> ' + item.title + ' </a>';
+                        posi_content += '<ul>';
+                        item.childs.map(function(child,index){
+                            posi_content+='<li>';
+                            posi_content+='<div class="pos"> ' + child.title + ' </div>';
+                            posi_content+="<ul>";
+                            child.three.map(function(childs,index){
+                                posi_content+='<li> ' + childs.title + ' </li>';
+                            });
+                            posi_content+='<li>投递简历并附上近期作品或链接，发邮件至<a href="mailto:#" class="mailto">zhaopin_tsh@163.com</a></li>';
+                            posi_content+="</ul>";
+                            posi_content+='</li>';
+                        })
+                        posi_content += '</ul>';
+                    });
+
+                    $("#job-tab-l").append(jobs_content);
+                    $("#job-info-r").append(posi_content);
+                }
+
+                //加入我们-左边菜单栏
+                $(".jobs .job-tab-l .l-list").first().addClass("active");
+                $(".jobs .job-tab-l .l-list").click(function () {
+                    $(this).addClass("active").siblings().removeClass("active");
+                    var $index=$(this).index();
+                    console.log($index);
+                    $(".job-info-r>ul").eq($index).addClass("active")
+                            .siblings().removeClass("active");
+                });
+
+                //加入我们-右边展示
+                $(".jobs .job-info-r>ul").first().addClass("active");
+                $(".jobs .job-info-r>ul>li>.pos").click(function () {
+                    $(this).toggleClass("current")
+                            .next("ul").toggle();
+                });
+            },
+            error:function () {
+                alert("出现错误！！！！");
+            }
+        });
+    });
+</script>
+</body>
+</html>
