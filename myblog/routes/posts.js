@@ -56,8 +56,8 @@ router.get('/:postId/comment/:commentId/remove', checkLogin, function(req, res, 
   res.send(req.flash());
 });
 
-router.get('/', function(req, res, next){
-	res.render('posts');
+router.get('/', function(req, res, next) {
+  res.render('posts');
 });
 
 
