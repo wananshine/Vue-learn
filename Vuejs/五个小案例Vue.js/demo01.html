@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>事件处理器</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <style type="text/css">
+  </style>
+</head>
+<body>
+   
+   
+   <div id="demo01">
+     <nav>
+       <a v-on:click="makeActive('home')">Home</a>
+       <a v-on:click="makeActive('about')">About</a>
+       <a v-on:click="makeActive('services')">Services</a>
+       <a v-on:click="makeActive('contact')">Contact</a>
+     </nav>
+     <p><span>you choose:{{active}}</span></p>
+   </div>
+   <script type="text/javascript">
+      new Vue({
+        el: "#demo01",
+        data: {
+          active: "home"
+        },
+        methods: {
+          makeActive: function(item){
+             this.active = item;
+          }
+        }
+      });
+   </script>
+</body>
+</html>
