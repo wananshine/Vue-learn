@@ -10,20 +10,22 @@ import Users from 'components/Users'
 
 const routes = [
 	{
-	  path: '/',
-	  name: 'Hello',
-	  component: Hello
-	},
-	{
-		path: '/home',
-		name: 'Home',
-		component: Home
-	},
-	{
-		path: '/users',
-		name: 'Users',
-		component: Users
-	}
+		path: '/',
+		name: 'Hello',
+		component: Hello,
+		children: [
+		{
+			path: '/home',
+			name: 'Home',
+			component: Home
+		},
+		{
+			path: '/users',
+			name: 'Users',
+			component: Users
+		}
+		]
+	}	
 ]
 
 export default new Router({
