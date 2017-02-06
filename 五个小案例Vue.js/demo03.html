@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <style type="text/css">
+.active{
+  background-color: #8ec16d;
+}
+  </style>
+</head>
+<body> 
+   <div id="demo01">
+     <ul>
+
+       <li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{'active' :service.active}">
+
+         {{ service.name }}<span>{{ service.price | currency }}</span>
+
+       </li>
+
+     </ul>
+     <p class="total">Total:{{ total() | currency }}</p>
+   </div>
+   <script type="text/javascript">
+      new Vue({
+        el: "#demo01",
+        data: {
+          services: [
+            { "name": "chide", "price": 300 , "active": true },
+            { "name": "hede", "price": 400 , "active": false },
+            { "name": "wande", "price": 500 , "active": false }
+          ]
+        },
+        methods: {
+          toggleActive: function(s){
+             s.active = !s.active
+          },
+          total: function(){
+            var total = 0;
+            this.services.forEach(function(s){
+              if (s.active) {
+                total += s.price;
+              }
+            });
+            return total;
+          }
+        }
+      });
+   </script>
+</body>
+</html>
