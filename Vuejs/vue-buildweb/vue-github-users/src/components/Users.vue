@@ -22,20 +22,38 @@
 export default {
   data() {
     return {
-      users: [
-
-      ]
+      // Url:"https://git.oschina.net/www.wananshine.com/learn/raw/master/users?dir=0&filepath=users&oid=1ba02daa09a30d6f7c2d919e96572aaf8a448fd7&sha=088502babbb7eadc1821d86ed8f58a3cbd1ae861",
+      Url: "https://api.github.com/users",
+      users: [ ]
     }
   },
 
+
+  ready: function() {
+		this.fetchUsers()
+	},
+
+
   methods: {
     fetchUsers() {
-    	
-      this.$http.get('https://api.github.com/users', (data) => {
-        this.users = data
+      // this.$http.get(this.Url, (data) => {
+      //   this.users = data
+      // })
+      // .catch((err)=>console.log(err));
+      /*******************************************/
+      this.$http.get(this.Url)
+      .then((response) => {
+      	console.log(JSON.stringify(response.data));
+      	this.users = response.data
+      	// console.log(JSON.stringify(response.data))
       })
-      .error((err) => console.log(err))
+      .catch(function(response){
+      	console.log(response)
+      })
+
+
     }
+
   }
 }
 </script>
@@ -45,3 +63,11 @@ export default {
   text-align: center;
 }
 </style>
+
+
+
+
+
+
+
+
