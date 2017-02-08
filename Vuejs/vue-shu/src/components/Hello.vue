@@ -41,15 +41,15 @@
           <legend>添加书籍</legend>
           <div class="form-group">
             <label>书名</label>
-            <input type="text" class="form-control" v-model="book.name" name="">
+            <input type="text" class="form-control" v-model="newbook.name" name="">
           </div>
           <div class="form-group">
             <label>作者</label>
-            <input type="text" class="form-control" v-model="book.author" name="">
+            <input type="text" class="form-control" v-model="newbook.author" name="">
           </div>
           <div class="form-group">
             <label>价格</label>
-            <input type="text" class="form-control" v-model="book.price" name="">
+            <input type="text" class="form-control" v-model="newbook.price" name="">
           </div>
           <button class="btn btn-primary btn-block" @click="addBook()">添加</button>
         </div>
@@ -58,108 +58,108 @@
   </div>
 </template>
  <script type="text/javascript">
-//   export default{
-//     data(){
-//       return{
-//         sortparam: '',
-//         book:{
-//           id: '0',
-//           author: '',
-//           name: '',
-//           price: ''
-//         },
-//         books:[
-//           {
-//             id: '1',
-//             author: '1',
-//             name: '1',
-//             price: '1'
-//           },
-//           {
-//             id: '2',
-//             author: '2',
-//             name: '2',
-//             price: '2'
-//           },
-//           {
-//             id: '3',
-//             author: '3',
-//             name: '3',
-//             price: '3'
-//           },
-//           {
-//             id: '4',
-//             author: '4',
-//             name: '4',
-//             price: '4'
-//           },
-//           {
-//             id: '5',
-//             author: '5',
-//             name: '5',
-//             price: '5'
-//           }
-//         ]
-//       }
-//     },
-//     computed: {
-//       sum: function(){
-//         var result = 0;
-//         for (var i = 0; i < this.books.length; i++) {
-//           result += Number(this.books[i].price)
-//         }
-//         return result;
-//       }
-//     },
-//     methods: {
-//       addBook: function(){
-//         this.book.id = this.books.length + 1;
-//         this.books.push(this.book);
-//         this.book = '';
-//       },
-//       delBook: function(book){
-//         this.books.splice(book,1);
-//       },
-//       sortBy: function(sortparam){
-//         this.sortparam = sortparam
-//       }
-//     }
-//   }
-
-
-
-new Vue({
-//   ready:function(){
-//     this.$http.get('  http://192.168.1.105:8080/book.json',function(data){
-//       this.$set('books',data);
-//     }).error(function(data,status,request){
-//       console.log('fail' + status + ',' + request )
-//     })
-//   },
-data:{
-books: [{
-            id: 1,
-            author: '曹雪芹',
-            name: '红楼梦',
-            price: 32.0
-        }, {
-            id: 2,
-            author: '施耐庵',
-            name: '水浒传',
-            price: 30.0
-        }, {
+  export default{
+    data(){
+      return{
+        sortparam: '',
+        newbook:{
+          //id: '0',
+          author: '',
+          name: '',
+          price: ''
+        },
+        books:[
+          {
+            id: '1',
+            author: '1',
+            name: '1',
+            price: '1'
+          },
+          {
+            id: '2',
+            author: '2',
+            name: '2',
+            price: '2'
+          },
+          {
             id: '3',
-            author: '罗贯中',
-            name: '三国演义',
-            price: 24.0
-        }, {
-            id: 4,
-            author: '吴承恩',
-            name: '西游记',
-            price: 20.0
-        }]
-}
-})
+            author: '3',
+            name: '3',
+            price: '3'
+          },
+          {
+            id: '4',
+            author: '4',
+            name: '4',
+            price: '4'
+          },
+          {
+            id: '5',
+            author: '5',
+            name: '5',
+            price: '5'
+          }
+        ]
+      }
+    },
+    computed: {
+      sum: function(){
+        var result = 0;
+        for (var i = 0; i < this.books.length; i++) {
+          result += Number(this.books[i].price)
+        }
+        return result;
+      }
+    },
+    methods: {
+      addBook(){
+        this.newbook.id = this.books.length + 1;
+        this.books.push(this.newbook);
+        this.newbook = '';
+      },
+      delBook: function(newbook){
+        this.books.splice(this.newbook, 1);
+      },
+      sortBy: function(sortparam){
+        this.sortparam = sortparam
+      }
+    }
+  }
+
+
+
+// new Vue({
+// //   ready:function(){
+// //     this.$http.get('  http://192.168.1.105:8080/book.json',function(data){
+// //       this.$set('books',data);
+// //     }).error(function(data,status,request){
+// //       console.log('fail' + status + ',' + request )
+// //     })
+// //   },
+// data:{
+// books: [{
+//             id: 1,
+//             author: '曹雪芹',
+//             name: '红楼梦',
+//             price: 32.0
+//         }, {
+//             id: 2,
+//             author: '施耐庵',
+//             name: '水浒传',
+//             price: 30.0
+//         }, {
+//             id: '3',
+//             author: '罗贯中',
+//             name: '三国演义',
+//             price: 24.0
+//         }, {
+//             id: 4,
+//             author: '吴承恩',
+//             name: '西游记',
+//             price: 20.0
+//         }]
+// }
+// })
 
 
  </script>

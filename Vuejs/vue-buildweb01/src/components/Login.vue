@@ -13,6 +13,9 @@
     			<input type="password" class="form-control" placeholder="Enter your password" v-model='credentials.password' name="">
     		</div>
     		<button class="btn btn-primary" @click='submit()'>Access</button>
+    		<button class="btn btn-warning" @click='login()'>Login</button>
+    		<button class="btn btn-danger" @click='loginone()'>Login</button>
+    		<button class="btn btn-success" @click='logintwo()'>Login</button>
     	</div>
     </div>
 </template>
@@ -37,6 +40,23 @@
 					password: this.credentials.password
 				}
 				auth.login(this, credentials, 'secretquote')
+			},
+			login(){
+				setTimeout(function(){
+					window.location.href = 'about';
+				},1000)
+			},
+			loginone(){
+
+				//// 字符串
+				this.$router.push('about');
+
+				// 对象
+				// this.$router.push({ path: 'about' })
+			},
+
+			logintwo(){
+				this.$router.replace('about')
 			}
 		}
 	}

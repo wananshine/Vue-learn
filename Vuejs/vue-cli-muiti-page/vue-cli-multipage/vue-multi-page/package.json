@@ -1,5 +1,5 @@
 {
-  "name": "vuejs-explorer-blog",
+  "name": "vue-multi-page",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "jianghaiping <jianghaiping@teshehui.com>",
@@ -10,11 +10,8 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "vue": "^2.1.10",
-    "vue-resource": "^1.2.0",
-    "vue-router": "^2.2.0",
-    "vuex": "^2.1.2"
+    "vue-router": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
