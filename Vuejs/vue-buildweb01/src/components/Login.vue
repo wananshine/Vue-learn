@@ -7,15 +7,25 @@
     			<p>{{ error }}</p>
     		</div>
     		<div class="form-group">
-    			<input type="text" class="form-control" placeholder="Enter your username" v-model='credentials.username' name="">
+    			<input type="text" class="form-control" placeholder="Enter your username" v-model='credentials.username' name="" >
     		</div>
     		<div class="form-group">
     			<input type="password" class="form-control" placeholder="Enter your password" v-model='credentials.password' name="">
     		</div>
     		<button class="btn btn-primary" @click='submit()'>Access</button>
-    		<button class="btn btn-warning" @click='login()'>Login</button>
+    		<button type="submit" class="btn btn-warning" @click='login()'>Login</button>
     		<button class="btn btn-danger" @click='loginone()'>Login</button>
     		<button class="btn btn-success" @click='logintwo()'>Login</button>
+    	</div>
+    	<div class="container">
+    		<div id="demo">
+    			<button v-on:click="show = !show">
+    				Toggle
+    			</button>
+    			<transition name="fade">
+    				<p v-if="show">hello</p>
+    			</transition>
+    		</div>
     	</div>
     </div>
 </template>
@@ -29,7 +39,8 @@
 					username: '',
 					password: ''
 				},
-				error: ''
+				error: '',
+				show: false
 			}
 		},
 
@@ -48,11 +59,18 @@
 			},
 			loginone(){
 
-				//// 字符串
-				this.$router.push('about');
 
-				// 对象
-				// this.$router.push({ path: 'about' })
+				if (this.credentials.username == '') {
+					alert("请输入用户名");
+				}else if(this.credentials.password == ''){
+					alert("请输入密码");
+				}else{
+					//// 字符串
+					this.$router.push('about');
+					// 对象
+					// this.$router.push({ path: 'about' })
+				}
+				
 			},
 
 			logintwo(){
@@ -61,3 +79,11 @@
 		}
 	}
 </script>
+<style lang="less">
+	.fade-enter-active,.fade-leave-active{
+		transition: opacity .5s;
+	}
+	 .fade-enter,.fade-leave-active{
+		opacity: 0;
+	}
+</style>
