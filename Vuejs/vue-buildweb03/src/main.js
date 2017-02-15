@@ -14,6 +14,12 @@ import VueResource from 'vue-resource'
 import bottom_nav from './components/BottomNav'
 Vue.component('bottom-nav', bottom_nav);
 
+import { Loadmore } from 'mint-ui';
+Vue.component('mt-loadmore', Loadmore);
+
+import { InfiniteScroll } from 'mint-ui';
+Vue.use(InfiniteScroll);
+
 Vue.use(VueResource)
 
 /* eslint-disable no-new */

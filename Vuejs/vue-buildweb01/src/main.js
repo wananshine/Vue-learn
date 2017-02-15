@@ -2,8 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import 'mint-ui/lib/style.css'
 import router from './router'
 import VueResource from 'vue-resource'
+
+import { Loadmore } from 'mint-ui';
+Vue.component('mt-loadmore', Loadmore);
+
+import { InfiniteScroll } from 'mint-ui';
+
+Vue.use(InfiniteScroll);
 
 Vue.use(VueResource)
 
