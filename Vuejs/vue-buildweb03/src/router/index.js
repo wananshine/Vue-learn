@@ -22,6 +22,8 @@ import TongjiProfitYuejie from 'components/tongji/TongjiProfitYuejie'
 import Order from 'components/order/Order'
 import OrderListNo from 'components/order/OrderListNo'
 import OrderListYes from 'components/order/OrderListYes'
+import OrderDetail from 'components/order/OrderDetail'
+
 
 import My from 'components/my/My'
 import MyIndex from 'components/my/MyIndex'
@@ -80,6 +82,10 @@ const routes = [
             {
               path: 'nofenrun',
               component: OrderListNo
+            },
+            {
+                path: 'orderdet',
+                component: OrderDetail
             }
           ]
         },

@@ -2,10 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-// import 'mint-ui/lib/style.css'
-// import './assets/css/animate.css'
-// import Mint from 'mint-ui';
-// Vue.use(Mint);
+// import store from './store'
+import 'mint-ui/lib/style.css'
+import './assets/css/animate.css'
+import Mint from 'mint-ui';
+Vue.use(Mint);
 
 import router from './router'
 
@@ -17,6 +18,12 @@ Vue.component('bottom-nav', bottom_nav);
 import { Loadmore } from 'mint-ui';
 Vue.component('mt-loadmore', Loadmore);
 
+
+import { Swipe, SwipeItem } from 'mint-ui';
+
+Vue.component('mt-swipe', Swipe);
+Vue.component('mt-swipe-item', SwipeItem);
+
 import { InfiniteScroll } from 'mint-ui';
 Vue.use(InfiniteScroll);
 
@@ -26,6 +33,7 @@ Vue.use(VueResource)
 new Vue({
   el: '#app',
   router,
+  // store,
   template: '<App/>',
   components: { App }
 })

@@ -1,0 +1,105 @@
+@import "base";
+@import "top-nav-bars";
+
+@f5:#f5f5f5;
+.nowrap{
+	white-space: nowrap;
+}
+
+.main{
+	background-color: @f5;
+	color: @8;
+}
+.de-box{
+	background-color: @f;
+	margin-top: 0.2rem;
+	font-size: 0.28rem;
+	overflow: hidden;
+	.title{
+		.px2rem(height,79);
+    .padding(0,0.62rem);
+    .por;
+    .hid;
+    line-height: 0.79rem;
+    border-bottom: 1px solid rgba(226,226,226,0.5);
+    &:after{
+      content: "";
+      width: 3px;
+      height: 0.26rem;
+      background-color: @599;
+      .poa;
+      top: 50%;
+      left: 0.3rem;
+      .translate3d(@x:0);
+		}
+	}
+	.con-1{
+		padding: 0 0.3rem 0.2rem 0.3rem;
+		p{
+			margin-top: 0.2rem;
+		}
+	}
+	.con-2{
+		padding: 0 0.3rem 0.2rem 0.3rem;
+		.item{
+			display: flex;
+			margin-top: 0.4rem;
+			.img{
+				// border: 1px solid @e2;
+				width: 1.5rem;
+				height: 1.5rem;
+				margin-right: 0.25rem;
+				position: relative;
+				img {
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          -webkit-transform: translate3d(-50%, -50%, 0);
+          -moz-transform: translate3d(-50%, -50%, 0);
+          -ms-transform: translate3d(-50%, -50%, 0);
+          -o-transform: translate3d(-50%, -50%, 0);
+        }
+			}
+			.con-main{
+				flex: 1;
+				overflow: hidden;
+				.tit{
+					color: @3;
+					width: 100%;
+					height: 0.5rem;
+					.nowrap;
+				}
+				.detail{
+					margin-bottom: 0.2rem;
+					span{
+						display: inline-block;
+						margin-right: 0.26rem;
+					}
+				}
+				.price{
+					label{
+						color: @3;
+					}
+					span{
+						float: right;
+					}
+				}
+			}
+		}
+	}
+	.totalprice{
+		margin: 0.4rem 0.3rem 0 0.3rem;
+		height: 0.8rem;
+		line-height: 0.8rem;
+		border-top: 1px solid rgba(226,226,226,0.5);
+		text-align: right;
+		font-size: 0.34rem;
+	}
+	.yen{
+		font-style: normal;
+		padding-right: 0.05rem;
+	}
+}
