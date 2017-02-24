@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/WEBPACK" libraries="{Vuejs/WEBPACK/node_modules}" />
+    <file url="file://$PROJECT_DIR$/mint-ui-example/mint-ui" libraries="{Vuejs/mint-ui-example/mint-ui/node_modules}" />
+    <file url="file://$PROJECT_DIR$/mint-ui-example/mint-ui-starter" libraries="{Vuejs/mint-ui-example/mint-ui-starter/node_modules}" />
+    <file url="file://$PROJECT_DIR$/myblog" libraries="{Vuejs/myblog/node_modules}" />
+    <file url="file://$PROJECT_DIR$/taopiaopiao" libraries="{Vuejs/taopiaopiao/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-buildweb/vue-github-users" libraries="{Vuejs/vue-buildweb/vue-github-users/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-buildweb/vue-github-users-master" libraries="{Vuejs/vue-buildweb/vue-github-users-master/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-buildweb/vue-rrr" libraries="{Vuejs/vue-buildweb/vue-rrr/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-buildweb01" libraries="{Vuejs/vue-buildweb01/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-buildweb03" libraries="{Vuejs/vue-buildweb03/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-cli-muiti-page/vue-cli-multi-page" libraries="{Vuejs/vue-cli-muiti-page/vue-cli-multi-page/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-cli-muiti-page/vue-cli-multipage/vue-multi-page" libraries="{Vuejs/vue-cli-muiti-page/vue-cli-multipage/vue-multi-page/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-example/vue-tutorial" libraries="{Vuejs/vue-example/vue-tutorial/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-examples-shaixuan/data-table" libraries="{Vuejs/vue-examples-shaixuan/data-table/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-github-explor/vuejs-explorer-blog" libraries="{Vuejs/vue-github-explor/vuejs-explorer-blog/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-github-explor/vuejs-github-explorer" libraries="{Vuejs/vue-github-explor/vuejs-github-explorer/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-jihuaban" libraries="{Vuejs/vue-jihuaban/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-loadmore-demo" libraries="{Vuejs/vue-loadmore-demo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-music" libraries="{Vuejs/vue-music/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-music-my/vue-music" libraries="{Vuejs/vue-music-my/vue-music/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-project" libraries="{Vuejs/vue-project/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-project02" libraries="{Vuejs/vue-project02/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-router" libraries="{Vuejs/vue-router/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-router-my" libraries="{Vuejs/vue-router-my/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-shu" libraries="{Vuejs/vue-shu/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-singlepage/vue-time-tracker" libraries="{Vuejs/vue-singlepage/vue-time-tracker/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-singlepage01/vue-sin" libraries="{Vuejs/vue-singlepage01/vue-sin/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-singlepage02/test-project" libraries="{Vuejs/vue-singlepage02/test-project/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-test" libraries="{Vuejs/vue-test/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-tutorial" libraries="{Vuejs/vue-tutorial/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-vuex-vue-router" libraries="{Vuejs/vue-vuex-vue-router/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue-webpack-my/my-webpack-simple-demo" libraries="{Vuejs/vue-webpack-my/my-webpack-simple-demo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue2-happy-my" libraries="{Vuejs/vue2-happy-my/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue2-happyfri" libraries="{Vuejs/vue2-happyfri/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue2.0-taopiaopiao" libraries="{Vuejs/vue2.0-taopiaopiao/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vue2.0-taopiaopiao/server" libraries="{Vuejs/vue2.0-taopiaopiao/server/node_modules}" />
+    <file url="file://$PROJECT_DIR$/vuex-dev" libraries="{Vuejs/vuex-dev/node_modules}" />
+  </component>
+</project>
